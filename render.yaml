@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: real-state-solution-frontend
+    env: node
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: https://airealstate.onrender.com
+      - key: VITE_MARKET_TRENDS_API
+        value: https://airealstate.onrender.com/api/market-trends
+      - key: VITE_STRUCTURED_MARKET_ANALYSIS_API
+        value: https://airealstate.onrender.com/api/market-trends/structured
+      - key: VITE_FINANCIAL_ANALYSIS_API
+        value: https://airealstate.onrender.com/api/financial-analysis
+      - key: VITE_ZONING_OPTIMIZER_API
+        value: https://airealstate.onrender.com/api/zoning-optimizer
