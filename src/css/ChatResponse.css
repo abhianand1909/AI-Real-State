@@ -1,0 +1,325 @@
+.chat-response-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Response Header */
+.response-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0;
+}
+
+.ai-icon {
+    font-size: 1.5rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.response-header h3 {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin: 0;
+    background: linear-gradient(45deg, #fff, #e0e0e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Candidates Container */
+.candidates-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Candidate Card */
+.candidate-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.candidate-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.candidate-header {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.candidate-number {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 1.1rem;
+    background: linear-gradient(45deg, #4a90e2, #357abd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.card-divider {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(to right, 
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1)
+    );
+}
+
+.candidate-content {
+    padding: 1.5rem;
+}
+
+/* Response Body */
+.response-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.response-section {
+    margin-bottom: 1rem;
+}
+
+.main-section {
+    margin-top: 1.5rem;
+}
+
+.sub-section {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.section-title {
+    color: #4a90e2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.section-title::before {
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 1.2rem;
+    background: linear-gradient(to bottom, #4a90e2, #357abd);
+    border-radius: 2px;
+}
+
+.response-content {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.response-content p {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+/* Citations Section */
+.citations-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.citations-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ffffff;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.citation-icon {
+    font-size: 1.2rem;
+}
+
+.citations-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.citation-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    padding: 0.75rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.citation-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.citation-link {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+.citation-link:hover {
+    color: #357abd;
+}
+
+.citation-index {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Usage Metadata */
+.usage-metadata {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+}
+
+.metadata-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.metadata-icon {
+    font-size: 1.5rem;
+}
+
+.metadata-header h4 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.metadata-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.metadata-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.metadata-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+}
+
+.item-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.item-value {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* Error State */
+.error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.error-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: shake 0.5s ease-in-out;
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-5px);
+    }
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .chat-response-container {
+        padding: 0.5rem;
+    }
+
+    .candidate-content {
+        padding: 1rem;
+    }
+
+    .metadata-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .response-header h3 {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .candidate-card,
+    .usage-metadata {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .candidate-card:hover {
+        background: rgba(0, 0, 0, 0.3);
+    }
+}

@@ -1,0 +1,238 @@
+/* Market Trends Page Styles */
+.market-trends {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #4a4a4a 100%);
+  color: #fff;
+  padding-top: 80px; /* Account for fixed header */
+}
+
+.market-trends-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header Section */
+.market-trends-header {
+  text-align: center;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.header-content {
+  position: relative;
+  z-index: 1;
+}
+
+.market-trends-header h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, #fff, #e6e6e6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.market-trends-header p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Content Section */
+.market-trends-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Search Section */
+.search-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-container {
+  text-align: center;
+}
+
+.search-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.search-container p {
+  opacity: 0.8;
+  margin-bottom: 2rem;
+}
+
+/* Results Section */
+.results-section {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Loading State */
+.loading-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border-top-color: #fff;
+  margin: 0 auto 1rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+.empty-state h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+
+.empty-state p {
+  opacity: 0.8;
+}
+
+/* Response Container */
+.response-container {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.response-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-text {
+  animation: fadeIn 0.8s ease-out;
+}
+
+.animate-text-delay {
+  animation: fadeIn 0.8s ease-out 0.2s backwards;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .market-trends-content {
+    grid-template-columns: 1fr;
+  }
+
+  .market-trends-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .market-trends-header p {
+    font-size: 1.1rem;
+  }
+
+  .search-section,
+  .results-section {
+    padding: 1.5rem;
+  }
+}
+
+/* Glass Effect Hover */
+.search-section:hover,
+.results-section:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transition: background 0.3s ease;
+}
+
+/* Analysis Tabs */
+.analysis-tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 1rem;
+}
+
+.analysis-tabs .tab {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.analysis-tabs .tab:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.analysis-tabs .tab.active {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments for analysis tabs */
+@media (max-width: 768px) {
+  .analysis-tabs {
+    flex-direction: column;
+  }
+  
+  .analysis-tabs .tab {
+    width: 100%;
+  }
+}
+  
